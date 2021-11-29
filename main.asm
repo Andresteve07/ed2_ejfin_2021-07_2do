@@ -122,9 +122,9 @@ INCIALIZO_VARIABLES:
     MOVFW NRO_VUELTAS;
     MOVWF COPIA_NRO_VUELTAS;
  CICLO
-    MOVLW .10;
     MOVFW COPIA_NRO_VUELTAS;
     MOVWF CIFRA_UNIDAD; 8
+    MOVLW .10;
     SUBWF COPIA_NRO_VUELTAS, F;nv -2
     BTFSS STATUS, ZERO;
     RETURN;
@@ -187,7 +187,7 @@ INCIALIZO_VARIABLES:
 ;MAIN---------------------------------------------------------------------------
 MAIN
     CALL CONFIGS;
-BUCLE;bucle de eventos aquí el main tiene que revisar si se produjo algun evento relevante 
+BUCLE;bucle de eventos aquÃ­ el main tiene que revisar si se produjo algun evento relevante 
     ;cuando se produjo una vuelta de la polea guiada el sensor interrumpe por rb0
     ;cuando pasa un minuto deberia medir las vueltas
     ;cuando pasan 20ms tengo que refrescar los dispays
